@@ -1,1 +1,30 @@
-"use strict";var animaImg=function(){img.classList.contains("active")?img.classList.remove("active"):img.classList.add("active")},img=document.querySelector(".modal-img");img.addEventListener("click",animaImg);var activeModal=function(a){a.preventDefault(),modal.classList.contains("active")?(modal.classList.remove("active"),modalBtn.innerText="Abrir Modal"):(modal.classList.add("active"),modalBtn.innerText="Fechar Modal")},modalBtn=document.querySelector(".abrir-modal"),modal=document.querySelector(".modal");modalBtn.addEventListener("click",activeModal);
+{
+const img = document.querySelector('.modal-img');
+
+function animaImg() {
+  if(img.classList.contains('active')) {
+    img.classList.remove('active');
+  } else {
+    img.classList.add('active');
+  }
+}
+
+img.addEventListener('click', animaImg);
+}
+{
+const modalBtn = document.querySelector('.abrir-modal');
+const modal = document.querySelector('.modal');
+
+function activeModal(e) {
+  e.preventDefault();
+  if(modal.classList.contains('active')) {
+    modal.classList.remove('active');
+    modalBtn.innerText = 'Abrir Modal';
+  } else {
+    modal.classList.add('active');
+    modalBtn.innerText = 'Fechar Modal';
+  }
+}
+
+modalBtn.addEventListener('click', activeModal);
+}
